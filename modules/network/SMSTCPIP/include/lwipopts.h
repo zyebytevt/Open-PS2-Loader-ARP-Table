@@ -158,11 +158,11 @@ a lot of data that needs to be copied, this should be set high. */
 
 /* ---------- ARP options ---------- */
 #ifdef INGAME_DRIVER
-#define ARP_TABLE_SIZE 2
+#define ARP_TABLE_SIZE 32
 #else
-#define ARP_TABLE_SIZE 3
+#define ARP_TABLE_SIZE 10
 #endif
-#define ARP_QUEUEING 0
+#define ARP_QUEUEING 1
 
 /**
  * If defined to 1, cache entries are updated or added for every kind of ARP traffic
@@ -171,7 +171,7 @@ a lot of data that needs to be copied, this should be set high. */
  * lwIP is sending to them. Recommended for embedded devices.
  */
 // Do not always insert ARP entries, as the ARP table is small.
-#define ETHARP_ALWAYS_INSERT 0
+#define ETHARP_ALWAYS_INSERT 1
 
 /* ---------- IP options ---------- */
 /* Define IP_FORWARD to 1 if you wish to have the ability to forward
